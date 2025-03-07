@@ -56,7 +56,7 @@ CREATE TABLE order_delivery (
     pickup_time TIMESTAMP(0) WITHOUT TIME ZONE,
     distance_km FLOAT,
     duration_min BIGINT,
-    cancellation_reason_id REFERENCES cancellation_reason(id)
+    cancellation_reason_id BIGINT NULL REFERENCES cancellation_reason(id)
 );
 
 --------------------------------------------------------------------------------
